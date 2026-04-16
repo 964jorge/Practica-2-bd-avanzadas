@@ -44,15 +44,18 @@ CREATE TABLE matriculas(
 
 --Estudiantes:
 COPY estudiantes (carnet, nombre, apellidos, creditos)
-FROM 'D:/Ficheros Bases de Datos/PL2/Matriculas/datos_estudiantes.csv'
+FROM 'C:\Datos Bases Avanzadas\datos_estudiantes.csv'
+--FROM 'D:/Ficheros Bases de Datos/PL2/Matriculas/datos_estudiantes.csv'
 DELIMITER ',';
 
 --Asignaturas:
 COPY asignaturas (codigo, nombre, caracter, creditos)
-FROM 'D:/Ficheros Bases de Datos/PL2/Matriculas/datos_asignaturas.csv'
+FROM 'C:\Datos Bases Avanzadas\datos_asignaturas.csv'
+--FROM 'D:/Ficheros Bases de Datos/PL2/Matriculas/datos_asignaturas.csv'
 DELIMITER ',';
 
 --Matriculas:
 COPY matriculas (carnet_estu, codigo_asig, nota)
-FROM 'D:/Ficheros Bases de Datos/PL2/Matriculas/datos_matriculas.csv'
+FROM 'C:\Datos Bases Avanzadas\datos_matriculas.csv'
+--FROM 'D:/Ficheros Bases de Datos/PL2/Matriculas/datos_matriculas.csv'
 DELIMITER ',';

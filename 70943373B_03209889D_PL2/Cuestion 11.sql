@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS musicosABorrar;
+
 CREATE TEMP TABLE musicosABorrar AS
 SELECT codigo_musico
 FROM musicos

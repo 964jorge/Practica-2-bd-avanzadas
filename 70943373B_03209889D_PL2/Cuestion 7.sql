@@ -91,4 +91,14 @@ CREATE TABLE Grupos_Tocan_Conciertos (
         ON DELETE RESTRICT ON UPDATE RESTRICT
 );
 
-
+--Entradas
+CREATE TABLE Entradas (
+    Codigo_entrada INTEGER PRIMARY KEY,
+    Localidad TEXT,
+    Precio NUMERIC(6,2),
+    Usuario TEXT,
+    Codigo_concierto_Conciertos INTEGER,
+    CONSTRAINT Conciertos_fk FOREIGN KEY (Codigo_concierto_Conciertos)
+        REFERENCES Conciertos(Codigo_concierto)
+        ON DELETE RESTRICT ON UPDATE RESTRICT
+);

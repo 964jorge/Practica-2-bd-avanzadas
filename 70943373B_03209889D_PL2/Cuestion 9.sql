@@ -1,15 +1,7 @@
---Cuestión 9: Realizar una consulta SQL que muestre el porcentaje de músicos que
---realizan conciertos en España teniendo entradas cuyo precio varía entre 20 y 50
---euros, y además tienen discos de género ‘rock’ con alguna canción de más de 3
---minutos, y son grupos de más de 3 componentes. Dibujar el diagrama con el
---resultado del comando EXPLAIN en forma de árbol de álgebra relacional. Explicar la
---información obtenida en el plan de ejecución de postgreSQL. Comparar el árbol
---obtenido por nosotros al traducir la consulta original al álgebra relacional y el que
---obtiene postgreSQL. Comentar las posibles diferencias entre ambos árboles.
 
+EXPLAIN
 
-
-SELECT COUNT(*)/(SELECT COUNT(*) FROM musicos) * 100
+SELECT COUNT(*)::float /(SELECT COUNT(*) FROM musicos) * 100
 FROM musicos
 WHERE musicos.codigo_grupo_grupo IN(
 
